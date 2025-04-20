@@ -1,0 +1,12 @@
+a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits the text color from its parent element */
+}
+
+.stat-card h3 {
+    color: rgb(255, 255, 255); /* You can customize the color here */
+}
+
+.stat-card a:hover h3 {
+    color: #ffffff; /* Optional: Change color on hover */
+}

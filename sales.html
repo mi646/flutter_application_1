@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sales.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <aside class="sidebar">
+        <div class="profile">
+            <img src="C:\Users\Owner\Downloads\dashboard ui kit (community)-html\WhatsApp Image 2024-10-14 at 02.51.21_14d85747.jpg" alt="User">
+            <h3>Mr.Mitesh</h3>
+        </div>
+        <nav>
+            <ul>
+                <li onclick="window.location.href='dash.html'">🏠 Home</li>
+                <li onclick="toggleDropdown('categories')">
+                    📦 Categories
+                    <span class="arrow">&#9660;</span>
+                </li>
+                <ul class="dropdown" id="categories">
+                    <li data-page="chocolate"  onclick="window.location.href='chocolate.html'">🍫 Chocolate</li>
+                    <li data-page="beauty"  onclick="window.location.href='beauty.html'">💄 Beauty</li>
+                    <li data-page="decoration"  onclick="window.location.href='decoration.html'">🎯 Decoration</li>
+                    <li data-page="electronics"  onclick="window.location.href='electronics.html'">📱 Electronics</li>
+                    <li data-page="fashion"  onclick="window.location.href='fashion.html'">👗 Fashion</li>
+                    <li data-page="furniture"  onclick="window.location.href='furniture.html'">🪑 Furniture</li>
+                    <li data-page="books"  onclick="window.location.href='books.html'">📚 Books</li>
+                    <li data-page="toys" onclick="window.location.href='toys.html'">🧸 Toys</li>
+                    <li data-page="sports" onclick="window.location.href='sports.html'">⚽ Sports</li>
+                    <li data-page="grocery" onclick="window.location.href='grocery.html'">🛒 Grocery</li>
+                </ul>
+
+                <li data-page="sales" onclick="window.location.href='sales.html'">💰 Sales</li>
+                <li data-page="customers" onclick="window.location.href='customers.html'">👤 Customers</li>
+                <li data-page="staff" onclick="window.location.href='staff.html'">👥 Staff</li>
+                <li data-page="settings" onclick="window.location.href='setting.html'">⚙️ Settings</li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main id="content">
+        <header class="top-header">
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="icons">
+                <i class="fas fa-bell notification"></i>
+                <button class="add-product-btn">➕ Add Product</button>
+            </div>
+        </header>
+
+        <section>
+            <h1>Sales Overview 💰</h1>
+            <div class="sales-summary">
+                <div class="stat-card">
+                    <h3>Total Sales</h3>
+                    <p id="monthlySales">$8,000</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Monthly Sales</h3>
+                    <p id="monthlySales"></p>
+                    <button class="add-sales-btn" onclick="openSalesForm()">➕ Add Sales</button>
+                </div>
+                <div class="stat-card">
+                    <h3>Pending Orders</h3>
+                    <p>25</p>
+                </div>
+            </div>
+
+            <canvas id="salesChart" width="400" height="200"></canvas>
+        </section>
+    </main>
+</div>
+
+<!-- Overlay -->
+<div class="overlay" id="overlay" onclick="closeSalesForm()"></div>
+
+<!-- Popup Form -->
+<div class="popup-form" id="salesForm">
+    <h3>Add Monthly Sales</h3>
+    <input type="number" id="salesAmount" placeholder="Enter sales amount">
+    <input type="text" id="salesMonth" placeholder="Enter month (e.g., March)">
+    <input type="text" id="salesCategory" placeholder="Enter category">
+    <button onclick="addSales()">Submit</button>
+</div>
+
+<script src="sales.js"></script>
+</body>
+</html>

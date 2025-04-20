@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toys Products</title>
+    <link rel="stylesheet" href="toys.css">
+    <link rel="stylesheet" href="dash.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="C:\Users\Owner\Downloads\dashboard ui kit (community)-html\WhatsApp Image 2024-10-14 at 02.51.21_14d85747.jpg" alt="User">
+                <h3>Mr.Mitesh</h3>
+            </div>
+
+            <nav>
+                <ul>
+                    <li onclick="window.location.href='dash.html'">
+                        🏠 Home
+                    </li>
+                    <li onclick="toggleDropdown('categories')">
+                        📦 Categories
+                        <span class="arrow">&#9660;</span>
+                    </li>
+                    <ul class="dropdown" id="categories">
+                        <li onclick="window.location.href='chocolate.html'">🍫 Chocolate</li>
+                        <li onclick="window.location.href='beauty.html'">💄 Beauty</li>
+                        <li onclick="window.location.href='decoration.html'">🎯 Decoration</li>
+                        <li onclick="window.location.href='electronics.html'">📱 Electronics</li>
+                        <li onclick="window.location.href='fashion.html'">👗 Fashion</li>
+                        <li onclick="window.location.href='furniture.html'">🪑 Furniture</li>
+                        <li onclick="window.location.href='books.html'">📚 Books</li>
+                        <li onclick="window.location.href='toys.html'">🧸 Toys</li>
+                        <li onclick="window.location.href='sports.html'">⚽ Sports</li>
+                        <li onclick="window.location.href='grocery.html'">🛒 Grocery</li>
+                    </ul>
+
+                    <li onclick="window.location.href='sales.html'">💰 Sales</li>
+                    <li onclick="window.location.href='customers.html'">👤 Customers</li>
+                    <li onclick="window.location.href='staff.html'">👥 Staff</li>
+                    <li onclick="window.location.href='setting.html'">⚙️ Settings</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="icons">
+                    <i class="fas fa-bell notification"></i>
+                    <button class="add-product-btn" id="addProductBtn">➕ Add Product</button>
+                </div>
+            </header>
+
+            <section class="category-content">
+                <h2>🧸 Toys Products</h2>
+                <div class="product-list" id="productList">
+                    <!-- Products will be loaded dynamically here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Add Product Modal -->
+    <div id="addProductModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h2>Add New Toy Product</h2>
+            <form id="addProductForm">
+                <input type="hidden" id="category" value="toys"> 
+                <div class="input-group">
+                    <label for="productName">Product Name</label>
+                    <input type="text" id="productName" required>
+                </div>
+                <div class="input-group">
+                    <label for="productPrice">Product Price</label>
+                    <input type="number" id="productPrice" required>
+                </div>
+                <div class="input-group">
+                    <label for="productImage">Product Image</label>
+                    <input type="text" id="productImage" required>
+                </div>
+                <button type="submit" class="submit-btn">Add Product</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Update Product Modal -->
+    <div id="updateProductModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeUpdateModal">&times;</span>
+            <h2>Update Toy Product</h2>
+            <form id="updateProductForm">
+                <input type="hidden" id="updateProductId">
+                <div class="input-group">
+                    <label for="updateProductName">Product Name</label>
+                    <input type="text" id="updateProductName" required>
+                </div>
+                <div class="input-group">
+                    <label for="updateProductPrice">Product Price</label>
+                    <input type="number" id="updateProductPrice" required>
+                </div>
+                <div class="input-group">
+                    <label for="updateProductImage">Product Image</label>
+                    <input type="text" id="updateProductImage" required>
+                </div>
+                <button type="submit" class="submit-btn">Update Product</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="toys.js"></script>
+    <script src="dash.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 20%;
+    background: #333;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 15px;
+    cursor: pointer;
+}
+
+.sidebar li:hover {
+    background: #444;
+}
+
+main {
+    width: 80%;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+header h1 {
+    margin: 0 0 20px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    background: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #4cae4c;
+}
+
+.account-settings {
+    margin-top: 40px;
+}
+
+.account-settings button {
+    background: #d9534f;
+}
+
+.account-settings button:hover {
+    background: #c9302c;
+}

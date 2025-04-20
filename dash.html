@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dash.css">
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+
+<div class="container">
+    <aside class="sidebar">
+        <div class="profile">
+            <img src="C:\Users\Owner\Downloads\dashboard ui kit (community)-html\WhatsApp Image 2024-10-14 at 02.51.21_14d85747.jpg" alt="User">
+            <h3>Mr.Mitesh</h3>
+        </div>
+
+        <nav>
+            <ul>
+                <li onclick="toggleDropdown('categories')">
+                    📦 Categories
+                    <span class="arrow">&#9660;</span>
+                </li>
+                <ul class="dropdown" id="categories">
+                    <li data-page="chocolate"  onclick="window.location.href='chocolate.html'">🍫 Chocolate</li>
+                    <li data-page="beauty"  onclick="window.location.href='beauty.html'">💄 Beauty</li>
+                    <li data-page="decoration"  onclick="window.location.href='decoration.html'">🎯 Decoration</li>
+                    <li data-page="electronics"  onclick="window.location.href='electronics.html'">📱 Electronics</li>
+                    <li data-page="fashion"  onclick="window.location.href='fashion.html'">👗 Fashion</li>
+                    <li data-page="furniture"  onclick="window.location.href='furniture.html'">🪑 Furniture</li>
+                    <li data-page="books"  onclick="window.location.href='books.html'">📚 Books</li>
+                    <li data-page="toys" onclick="window.location.href='toys.html'">🧸 Toys</li>
+                    <li data-page="sports" onclick="window.location.href='sports.html'">⚽ Sports</li>
+                    <li data-page="grocery" onclick="window.location.href='grocery.html'">🛒 Grocery</li>
+                </ul>
+
+                <li data-page="sales"  onclick="window.location.href='sales.html'">💰 Sales</li>
+                <li data-page="customers" onclick="window.location.href='customers.html'">👤 Customers</li>
+                <li data-page="staff" onclick="window.location.href='staff.html'">👥 Staff</li>
+                <li data-page="settings" onclick="window.location.href='setting.html'">⚙️ Settings</li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main id="content">
+        <header class="top-header">
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="icons">
+                <i class="fas fa-bell notification"></i>
+                <button class="add-product-btn">➕ Add Product</button>
+            </div>
+        </header>
+
+        <section>
+            <h1>Welcome Boss 👋</h1>
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>Total Products</h3>
+                    <p id="total-products">Loading...</p> <!-- This will be dynamically updated -->
+                </div>
+                <div class="stat-card">
+                    <a href="sales.html">
+                        <h3>Total Sales</h3>
+                    </a>
+                    <p>$12,345</p>
+                </div>
+                <div class="stat-card">
+                    <a href="customers.html">
+                        <h3>Total Customers</h3>
+                    </a>
+                   
+                    <p id="users">Loading...</p> <!-- This will hold the dynamic customer count -->
+                </div>                
+            </div>
+
+            <div class="recent-transactions">
+                <h2>Recent Transactions</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Customer</th>
+                            <th>Price</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Apple MacBook Pro</td>
+                            <td>John Doe</td>
+                            <td>$1200</td>
+                            <td>Completed</td>
+                        </tr>
+                        <tr>
+                            <td>Samsung Watch</td>
+                            <td>Jane Smith</td>
+                            <td>$350</td>
+                            <td>Pending</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <section id="product-cards">
+    <h2>Categories</h2>
+    <div class="stats">
+        <div class="stat-card">
+            <a href="chocolate.html">
+                <h3>Chocolate</h3>
+            </a>
+            <p id="products">Loading...</p>
+        </div>
+        <div class="stat-card">
+            <a href="beauty.html">
+                <h3>Fashion</h3>
+            </a>
+            <p id="beauty-products">Loading...</p>
+        </div>
+        <div class="stat-card">
+            <a href="decoration.html">
+                <h3>Decoration</h3>
+            </a>
+            <p id="decoration-products">Loading...</p>
+        </div>
+        <div class="stat-card">
+            <a href="electronics.html">
+                <h3>Electronics</h3>
+            </a>
+            <p id="electronics-products">Loading...</p>
+        </div>
+        
+        <div class="stat-card">
+            <a href="furniture.html">
+                <h3>Furniture</h3>
+            </a>
+            <p id="furniture-products">Loading...</p>
+        </div>
+        <div class="stat-card">
+            <a href="books.html">
+                <h3>Books</h3>
+            </a>
+            <p id="books-products">Loading...</p>
+        </div>
+        <div class="stat-card">
+            <a href="toys.html">
+                <h3>Toys</h3>
+            </a>
+            <p id="toys-products">Loading...</p>
+        </div>
+        <div class="stat-card">
+            <a href="sports.html">
+                <h3>Sports</h3>
+            </a>
+            <p id="sports-products">Loading...</p>
+        </div>
+        <div class="stat-card">
+            <a href="grocery.html">
+                <h3>Grocery</h3>
+            </a>
+            <p id="grocery-products">Loading...</p>
+        </div>
+        <div class="stat-card">
+            <a href="beauty.html">
+                <h3>Beauty</h3>
+            </a>
+            <p id="beauty">Loading...</p>
+        </div>
+    </div>
+</section>
+
+        </section>
+    </main>
+</div>
+
+
+
+<script src="dash.js"></script>
+<script src="server.js"></script>
+</body>
+</html>

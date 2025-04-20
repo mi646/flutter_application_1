@@ -1,0 +1,49 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+.container {
+    display: flex;
+    height: 100vh;
+}
+.sidebar {
+    width: 250px;
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
+main {
+    padding: 20px;
+    flex-grow: 1;
+    background: #ecf0f1;
+}
+.customer-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.customer-list th, .customer-list td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+.add-customer-btn {
+    padding: 10px;
+    background: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.delete-btn {
+    padding: 8px 12px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}

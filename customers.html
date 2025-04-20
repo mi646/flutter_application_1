@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="customers.css">
+    <link rel="stylesheet" href="dash.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="C:\Users\Owner\Downloads\dashboard ui kit (community)-html\WhatsApp Image 2024-10-14 at 02.51.21_14d85747.jpg" alt="User">
+                <h3>Mr.Mitesh</h3>
+            </div>
+    
+            <nav>
+                <ul>
+                    <li onclick="window.location.href='dash.html'">
+                        🏠 Home
+                    </li>
+                    <li onclick="toggleDropdown('categories')">
+                        📦 Categories
+                        <span class="arrow">&#9660;</span>
+                    </li>
+                    <ul class="dropdown" id="categories">
+                        <li data-page="chocolate"  onclick="window.location.href='chocolate.html'">🍫 Chocolate</li>
+                        <li data-page="beauty"  onclick="window.location.href='beauty.html'">💄 Beauty</li>
+                        <li data-page="decoration"  onclick="window.location.href='decoration.html'">🎯 Decoration</li>
+                        <li data-page="electronics"  onclick="window.location.href='electronics.html'">📱 Electronics</li>
+                        <li data-page="fashion"  onclick="window.location.href='fashion.html'">👗 Fashion</li>
+                        <li data-page="furniture"  onclick="window.location.href='furniture.html'">🪑 Furniture</li>
+                        <li data-page="books"  onclick="window.location.href='books.html'">📚 Books</li>
+                        <li data-page="toys" onclick="window.location.href='toys.html'">🧸 Toys</li>
+                        <li data-page="sports" onclick="window.location.href='sports.html'">⚽ Sports</li>
+                        <li data-page="grocery" onclick="window.location.href='grocery.html'">🛒 Grocery</li>
+                    </ul>
+    
+                    <li data-page="sales" onclick="window.location.href='sales.html'">💰 Sales</li>
+                    <li data-page="customers" onclick="window.location.href='customer.html'">👤 Customers</li>
+                    <li data-page="staff" onclick="window.location.href='staff.html'">👥 Staff</li>
+                    <li data-page="settings" onclick="window.location.href='setting.html'">⚙️ Settings</li>
+                </ul>
+            </nav>
+        </aside>
+      <main>
+        <header>
+            <h1>Customer Management</h1>
+        </header>
+        <section class="customer-list">
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="customerTableBody">
+                    <!-- Customer rows will be populated here dynamically -->
+                </tbody>
+            </table>
+        </section>
+        
+    </main>
+</div>
+
+<script src="customers.js"></script>
+<script src="dash.js"></script>
+</body>
+</html>
